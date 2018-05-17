@@ -1,0 +1,86 @@
+// Styling for the team section
+.team-box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+// Styling for the services section
+.service-box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#team {
+  h2 {
+    color: $white;
+  }
+  img {
+    max-width:100%;
+    max-height:100%;
+  }
+  .team-member, .team-member .team-img {
+    position: relative;
+  }
+  .team-member {
+      overflow: hidden;
+  }
+  .team-member, .team-member .team-img {
+    position: relative;
+  }
+  .team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 0;
+    @include transition-all;
+  }
+  .team-member {
+    overflow: hidden;
+  }
+  .team-member:hover .team-hover .desk {
+    top: 50%;
+  }
+  .team-member:hover .team-hover, .team-member:hover .team-hover .desk {
+    opacity: 1;
+  }
+  .team-hover .desk {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    @include transition-all;
+    padding: 0 20px;
+  }
+  .desk, .desk h4 {
+    text-align: center;
+  }
+  .team-member:hover .team-hover, .team-member:hover .team-hover .desk {
+    opacity: 1;
+  }
+  .desk, .desk h4, .team-hover {
+    text-align: center;
+  }
+  .team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+  }
+  .team-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+  }
+  .team-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $white;
+  }
+}
